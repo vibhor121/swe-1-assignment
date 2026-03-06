@@ -9,5 +9,6 @@ CREATE TABLE IF NOT EXISTS issued_tickets (
     event_id VARCHAR(50) NOT NULL,
     user_id VARCHAR(50) NOT NULL,
     ticket_number INTEGER NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (event_id, ticket_number)
 );
